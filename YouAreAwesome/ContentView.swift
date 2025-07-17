@@ -19,7 +19,7 @@ struct ContentView: View {
                 .foregroundStyle(.purple)
            
             
-            Text ("I am an app developer!")
+            Text ("I am an app Developer!")
                 .font(.largeTitle)
                 .foregroundStyle(.green)
     

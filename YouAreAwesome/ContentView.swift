@@ -25,11 +25,14 @@ struct ContentView: View {
             Text (message)
                 .font(.largeTitle)
                 .foregroundStyle(.green)
+                .fontWeight(.heavy)
             
+         
             Button("Click Me!") {
                 message = "Awesome!"
+                    
+                    
             }
-    
           
                 
         }

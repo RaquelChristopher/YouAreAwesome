@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+   @State var message = "I Am A Programmer!"
+    
     var body: some View {
         
         
@@ -19,9 +22,13 @@ struct ContentView: View {
                 .foregroundStyle(.purple)
            
             
-            Text ("I am an app Developer!")
+            Text (message)
                 .font(.largeTitle)
                 .foregroundStyle(.green)
+            
+            Button("Click Me!") {
+                message = "Awesome!"
+            }
     
           
                 

@@ -21,7 +21,7 @@ struct ContentView: View {
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.orange)
-                
+            
             
             Text (message)
                 .font(.largeTitle)
@@ -31,12 +31,17 @@ struct ContentView: View {
             
             
             Button("Press Me!") {
-                if message == "You are Awesome!" {
-                    message = "You are Great!"
-                    imageString = "hand.thumbsup"
+                let message1 = "You are Awesome!"
+                let message2 = "You are Great!"
+                let imageString1 = "hand.thumbsup"
+                let imageString2 = "sun.max.fill"
+                
+                if message == message1 {
+                    message = message2
+                    imageString = imageString1
                 }
-                else { message = "You are Awesome!"
-                    imageString = "sun.max.fill"
+                else { message = message1
+                    imageString = imageString2
                     
                 }
                 

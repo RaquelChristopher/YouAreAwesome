@@ -36,8 +36,7 @@ struct ContentView: View {
             Button("Press Me!") {
                 let message1 = "You are Awesome!"
                 let message2 = "You are Great!"
-                let imageString1 = "hand.thumbsup"
-                let imageString2 = "sun.max.fill"
+              
                 
               
                 

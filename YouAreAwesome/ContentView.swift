@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var message = ""
-    @State private var imageString = ""
+    @State private var imageName = ""
     
     var body: some View {
         
@@ -17,15 +17,18 @@ struct ContentView: View {
         VStack {
             Spacer()
             
-            Image(systemName: imageString)
+            Image(imageName)
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.orange)
+                .clipShape(RoundedRectangle(cornerRadius: 30))
+                .shadow(radius: 30)
             
             
             Text (message)
                 .font(.largeTitle)
-                .fontWeight(.ultraLight)
+                .fontWeight(.heavy)
+                .foregroundStyle(.red)
             
             Spacer()
             
@@ -36,19 +39,14 @@ struct ContentView: View {
                 let imageString1 = "hand.thumbsup"
                 let imageString2 = "sun.max.fill"
                 
-                if message == message1 {
-                    message = message2
-                    imageString = imageString1
-                }
-                else { message = message1
-                    imageString = imageString2
-                    
-                }
+              
+                
+                message = (message == message1 ? message2 : message1)
+                imageName = (imageName == "image0" ? "image1" : "image0")
                 
             }
             .buttonStyle(.borderedProminent)
             .font(.title2)
-            .tint(.orange)
             
             
         }
